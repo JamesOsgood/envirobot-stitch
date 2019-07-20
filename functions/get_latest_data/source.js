@@ -55,7 +55,7 @@ exports = async function(arg)
     	];
       		
 	result = await collection.aggregate(pipeline_latest_data).toArray();
-	console.log('Merged latest data');
+	console.log('Merged latest data 2');
 
 		pipeline_merge_historic = [
 			{
