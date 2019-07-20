@@ -1,0 +1,9 @@
+{
+    "name": "flood_data",
+    "type": "SCHEDULED",
+    "config": {
+        "schedule": "*/15 * * * *"
+    },
+    "function_name": "get_latest_data",
+    "disabled": false
+}
