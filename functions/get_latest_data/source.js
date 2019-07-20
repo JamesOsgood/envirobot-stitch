@@ -1,7 +1,7 @@
 exports = async function(arg)
 {
     var http = context.services.get("http");
-		var url = "http://environment.data.gov.uk/flood-monitoring/data/readings?latest";
+	var url = "http://environment.data.gov.uk/flood-monitoring/data/readings?latest";
 
     // Get latest data from web service
 		response = await http.get({url : url}); 
@@ -54,7 +54,8 @@ exports = async function(arg)
     			}
     	];
       		
-    result = await collection.aggregate(pipeline_latest_data).toArray();
+	result = await collection.aggregate(pipeline_latest_data).toArray();
+	console.log('Merged latest data');
 
 		pipeline_merge_historic = [
 			{
@@ -73,6 +74,7 @@ exports = async function(arg)
 		];
     
     result = await collection.aggregate(pipeline_merge_historic).toArray();
+	console.log('Merged Historic data');
     return result;
 }
 
