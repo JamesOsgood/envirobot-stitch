@@ -1,0 +1,6 @@
+{
+    "name": "flood_data_http",
+    "type": "http",
+    "config": {},
+    "version": 1
+}
